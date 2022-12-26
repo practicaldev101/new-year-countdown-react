@@ -1,0 +1,72 @@
+@keyframes animateLogo {
+    0%{
+        transform: rotate(-60deg);
+    }
+    100%{
+        transform: rotate(60deg);
+    }
+}
+
+@keyframes animateTitle {
+    0%{
+        margin-left: -100%;
+    }
+    50%{
+        transform: rotate(20deg);
+    }
+    100%{
+        margin-left: 0;
+        transform: rotate(0deg);
+    }
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    color: white;
+    background: #0e1111;
+    font-family: 'Rubik Gemstones', cursive;
+}
+.app__box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+}
+.app__title{
+    font-size: 5rem;
+    margin: 10px;
+    animation: animateTitle 2s ease-in;
+}
+
+.title--red{
+    color: #FD5E53;
+}
+.title--green{
+    color: #21BF73;
+}
+
+.title--pink{
+    color: #E84A5F;
+}
+
+.tittle--orange{
+    color: #DF8543;
+}
+.app__logo{
+    object-fit: cover;
+    width: 100px;
+    display: block;
+    margin: auto;
+    animation: animateLogo 2s ease-in-out alternate-reverse infinite;
+}
+
+@media only screen and (max-width: 768px) { 
+    .app__title{
+        font-size: 3rem;
+    }
+}

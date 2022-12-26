@@ -1,0 +1,54 @@
+.container__clock{
+    display: flex;
+    flex-direction: row;
+    font-size: 5rem;
+    width: fit-content;
+    margin: auto;
+    position: relative;
+    border: 8px solid transparent;
+    background: black;
+    border-radius: 15px;
+    padding: 20px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-clip: padding-box;
+}
+.container__clock::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    bottom: 0;
+    width: 100%;
+    border: inherit;
+    border-radius: inherit;
+    margin: -8px;
+    z-index: -1;
+    justify-content: center;
+    background: linear-gradient(to right, #ff5e62, #ff9966);
+}
+
+.clock__item::after{
+    content: ':';
+}
+.clock--days::after{
+    content: 'd:';
+}
+.clock--hours::after{
+    content: 'h:';
+}
+.clock--minutes::after{
+    content: 'm:';
+}
+.clock--seconds::after{
+    content: 's';
+}
+
+@media only screen and (max-width: 768px) {
+    .container__clock{
+        justify-content: center;
+        width: 80%;
+        font-size: 3rem;
+    }
+} 

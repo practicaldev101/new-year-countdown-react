@@ -1,0 +1,43 @@
+.credits{
+    font-family: 'Courier New', Courier, monospace;
+}
+.credits__list{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
+    margin: auto;
+    justify-content: center;
+    list-style: none;
+    align-items: center;
+}
+
+.list__item{
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    font-size: 3rem;
+    padding: 5px;
+    transition: all 0.5s ease-in-out;
+}
+
+.list__item > a{
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    transition: all 1s ease-in-out;
+}
+
+.list__item > a:hover{
+    padding: 5px;
+    border-radius: 15px;
+    color: black;
+    background: rgba(255, 255, 255, 0.404);
+}
+.list__item > a:visited{
+    color: white;
+}
+
+

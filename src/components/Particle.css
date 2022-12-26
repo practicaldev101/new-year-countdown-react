@@ -1,0 +1,61 @@
+@keyframes snowflakeFalling {
+    0%{
+        margin-top: -200px;
+        
+    }
+    100%{
+        
+        top: 90%;
+        right: 50%;
+        filter: opacity(1%);
+    }
+}
+
+@keyframes snowflakeFallingSurprise {
+    0%{
+        margin-top: -200px;
+    }
+    100%{
+        top: 90%;
+        right: 10%;
+        filter: opacity(50%);
+        transform: rotate(180deg);
+    }
+}
+
+
+.particle{
+    font-size: 2rem;
+    position: fixed;
+    width: fit-content;
+    z-index: -1;
+    
+}
+
+.particle--surprise{
+    color: yellow;
+    padding: 20px;
+    border-radius: 200px;
+    background: black;  /* fallback for old browsers */
+
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.particle__gift--slow{
+    animation: snowflakeFallingSurprise 6s ease-in infinite alternate-reverse;
+}
+.particle__gift--fast{
+    animation: snowflakeFallingSurprise 3s ease-in infinite alternate-reverse;
+}
+
+.particle--slow{
+    animation: snowflakeFalling 10s ease-in infinite alternate-reverse;
+}
+
+.particle--slow{
+    animation: snowflakeFalling 10s ease-in infinite alternate-reverse;
+}
+
+.particle--fast{
+    animation: snowflakeFalling 5s ease-in infinite alternate-reverse;
+}
